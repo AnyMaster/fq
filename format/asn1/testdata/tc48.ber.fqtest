@@ -1,0 +1,40 @@
+$ fq -d asn1_ber v tc48.ber
+    |00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f|0123456789abcdef|.{}: tc48.ber (asn1_ber) 0x0-0xf.7 (16)
+    |                                               |                |  error: asn1_ber: RawLen(value): failed at position 13 (read size 0 seek pos 0): negative nBits
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).FieldScalarRawLen
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode_gen.go:789
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).FieldRawLen
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode_gen.go:802
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue.func1
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:214
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).RangeFn
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:691
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).LenFn
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:667
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:174
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue.func1.1.1
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:186
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).FieldStruct
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:575
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue.func1.1
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:186
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).FieldArray
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:564
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue.func1
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:178
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).RangeFn
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:691
+    |                                               |                |    github.com/wader/fq/pkg/decode.(*D).LenFn
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:667
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BERValue
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:174
+    |                                               |                |    github.com/wader/fq/format/asn1.decodeASN1BER
+    |                                               |                |      /Users/wader/src/fq/format/asn1/asn1_ber.go:322
+    |                                               |                |    github.com/wader/fq/pkg/decode.decode.func1
+    |                                               |                |      /Users/wader/src/fq/pkg/decode/decode.go:67
+0x00|23                                             |#               |  class: "universal" (0) 0x0-0x0.1 (0.2)
+0x00|23                                             |#               |  form: "constructed" (1) 0x0.2-0x0.2 (0.1)
+0x00|23                                             |#               |  tag: "bit_string" (0x3) 0x0.3-0x0.7 (0.5)
+0x00|   80                                          | .              |  length: "indefinite" (0) 0x1-0x1.7 (1)
+0x00|      03 02 00 01 03 02 00 01 03 02 0f 0f 00 00|  ..............|  unknown0: raw bits 0x2-0xf.7 (14)
